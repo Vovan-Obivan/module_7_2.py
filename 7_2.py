@@ -1,13 +1,15 @@
 def custom_write(file_name, string):
     n = 0
     elem = {}
+    file = open(File_name, 'a', encoding='utf-8' #открытие файла до начала цикла
     for i in info:
-        file = open(file_name, 'a', encoding='utf-8')
+        #file = open(file_name, 'a', encoding='utf-8')
         tell = (file.tell())
         n += 1
         file.write(f'{i}\n')
-        file.close()
+        #file.close()
         elem.update({(n, tell):i})
+    file.close() # Закрытие файла после цикла
     return  elem
 
 info = [
